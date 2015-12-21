@@ -1,0 +1,9 @@
+#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=96000
+http://localhost:6001/streams/testing-video.mp4/testing-video.mp4_96000_stream.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=128000
+http://localhost:6001/streams/testing-video.mp4/testing-video.mp4_128000_stream.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=384000
+http://localhost:6001/streams/testing-video.mp4/testing-video.mp4_384000_stream.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=700000
+http://localhost:6001/streams/testing-video.mp4/testing-video.mp4_700000_stream.m3u8

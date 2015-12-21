@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html ng-app="videoStream">
+<head>
+    <title>Video Streaming Demo</title>
+    <!-- Jquery -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+
+    <!--&lt;!&ndash; Bootstrap &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">-->
+    <!--<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- CSS Effect -->
+    <link type="text/css" rel="stylesheet" href="font-icons/custom-icons/css/custom-icons.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/video.js/dist/video-js/video-js.css">
+
+    <link rel="stylesheet" href="/stylesheets/layout.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/orange.css">
+
+    <!-- video.js -->
+    <script src="bower_components/video.js/dist/video-js/video.js"></script>
+
+    <!-- Media Sources plugin -->
+    <script src="bower_components/videojs-contrib-media-sources/src/videojs-media-sources.js"></script>
+
+    <!-- HLS plugin -->
+    <script src="js/src/videojs-hls.js"></script>
+
+    <!-- segment handling -->
+    <script src="js/src/xhr.js"></script>
+    <script src="js/src/flv-tag.js"></script>
+    <script src="js/src/exp-golomb.js"></script>
+    <script src="js/src/h264-stream.js"></script>
+    <script src="js/src/aac-stream.js"></script>
+    <script src="js/src/segment-parser.js"></script>
+
+    <!-- m3u8 handling -->
+    <script src="js/src/stream.js"></script>
+    <script src="js/src/m3u8/m3u8-parser.js"></script>
+    <script src="js/src/playlist-loader.js"></script>
+    <script src="bower_components/pkcs7/dist/pkcs7.unpad.js"></script>
+
+    <script src="js/src/decrypter.js"></script>
+    <script src="js/src/bin-utils.js"></script>
+
+</head>
+
+<body ng-controller="mainCtrl">
+<section class="slice"  id="contactSlice" data-nekoanim="fadeInUp" data-nekodelay="100">
+    <div class="container">
+        <div class="row">
+
+            <form name="loginForm" role="form">
+
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                        <div class="form-group text-center">
+                            <img height="49" style="margin-bottom: 20px;" src="images/main-logo.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="text-center">
+                        <legend>Drag & Drop</legend>
+                        <div id="upload-box" class="col-md-12">
+                            <p id="progress"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+
+                    <fieldset>
+                        <legend class="text-center">Select A Link</legend>
+
+                        <div id="list" class="col-md-12">
+                            <ul style="vertical-align: middle;">
+                                <li ng-repeat="file in files" style="margin: 5px 5px;">
+                                    <a ng-click="video.request(file.file_path)" style="cursor: pointer;">{{file.file_name}}</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <legend>Play The Video</legend>
+                        <div class="videocontent">
+                            <video class="video-js vjs-default-skin" id="video" width="auto" height="auto" controls="controls">
+                                <source src="http://solutions.brightcove.com/jwhisenant/hls/apple/bipbop/bipbopall.m3u8" type="application/x-mpegURL"/>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+</body>
+
+<script>
+    videojs.options.flash.swf = 'bower_components/video.js/dist/video-js/video-js.swf';
+    // initialize the player
+    var player = videojs('video');
+</script>
+
+<!-- AngularJS files -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/angular-ui/build/angular-ui.min.js"></script>
+<script src="bower_components/angular-ui/ui-bootstrap-tpls-0.11.0.min.js"></script>
+<script src="bower_components/angular-file-upload.js"></script>
+<script src="bower_components/bootbox.min.js"></script>
+<script src="bower_components/gritter/js/jquery.gritter.min.js"></script>
+
+<script src="js/videoStream/main.js"></script>
+<script src="js/videoStream/controllers.js"></script>
+<script src="js/videoStream/binary.js"></script>
+<script src="js/videoStream/common.js"></script>
+
+</html>

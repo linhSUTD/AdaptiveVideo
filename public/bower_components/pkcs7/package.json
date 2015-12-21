@@ -1,0 +1,65 @@
+{
+  "name": "pkcs7",
+  "version": "0.2.2",
+  "main": "lib/pkcs7.js",
+  "description": "Add and remove pkcs7-style padding.",
+  "homepage": "https://github.com/brightcove/pkcs7",
+  "bugs": {
+    "url": "https://github.com/brightcove/pkcs7/issues"
+  },
+  "engines": {
+    "npm": "^1.4.6",
+    "node": "^0.10"
+  },
+  "author": {
+    "name": "Brightcove"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brightcove/pkcs7"
+  },
+  "license": "Apache2",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "keywords": [
+    "pkcs7",
+    "pkcs7 encrypt decrypt padding pkcs"
+  ],
+  "devDependencies": {
+    "grunt-browserify": "^2.1.4",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "jshint-stylish": "^0.2.0",
+    "load-grunt-tasks": "^0.4.0",
+    "time-grunt": "^0.3.1"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "bin": {
+    "pkcs7": "lib/cli.js"
+  },
+  "_id": "pkcs7@0.2.2",
+  "dist": {
+    "shasum": "e05e72b8a86c0578b6c377dcc893751de2dae5c4",
+    "tarball": "http://registry.npmjs.org/pkcs7/-/pkcs7-0.2.2.tgz"
+  },
+  "_from": "pkcs7@^0.2.2",
+  "_npmVersion": "1.4.6",
+  "_npmUser": {
+    "name": "dmlap",
+    "email": "dlapalomento@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "dmlap",
+      "email": "dlapalomento@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_shasum": "e05e72b8a86c0578b6c377dcc893751de2dae5c4",
+  "_resolved": "https://registry.npmjs.org/pkcs7/-/pkcs7-0.2.2.tgz"
+}

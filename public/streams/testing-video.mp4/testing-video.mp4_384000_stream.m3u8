@@ -1,0 +1,15 @@
+#EXTM3U
+#EXT-X-TARGETDURATION:5
+#EXTINF:5,
+http://localhost:6001/streams/testing-video.mp4/testing-video.mp4_384000_ts-1.ts
+#EXTINF:5,
+http://localhost:6001/streams/testing-video.mp4/testing-video.mp4_384000_ts-2.ts
+#EXTINF:5,
+http://localhost:6001/streams/testing-video.mp4/testing-video.mp4_384000_ts-3.ts
+#EXTINF:5,
+http://localhost:6001/streams/testing-video.mp4/testing-video.mp4_384000_ts-4.ts
+#EXTINF:5,
+http://localhost:6001/streams/testing-video.mp4/testing-video.mp4_384000_ts-5.ts
+#EXTINF:5,
+http://localhost:6001/streams/testing-video.mp4/testing-video.mp4_384000_ts-6.ts
+#EXT-X-ENDLIST
